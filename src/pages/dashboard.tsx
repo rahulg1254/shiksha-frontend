@@ -778,7 +778,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
           </Box>
 
           <Snackbar
-            anchorOrigin={{ vertical, horizontal }}
+            anchorOrigin={{ vertical, horizontal }} 
             open={openModal}
             onClose={handleClose}
             className="sample"
@@ -816,7 +816,10 @@ const Dashboard: React.FC<DashboardProps> = () => {
               >
                 <Link className="flex-center fs-14 text-decoration" href={'/'}>
                   {t('DASHBOARD.MORE_DETAILS')}{' '}
-                  <ArrowForwardSharpIcon sx={{ height: '18px' }} />
+                  <ArrowForwardSharpIcon
+                    onClick={() => router.push('/attendance-overview')}
+                    sx={{ height: '18px' }}
+                  />
                 </Link>
               </Box>
             </Stack>
